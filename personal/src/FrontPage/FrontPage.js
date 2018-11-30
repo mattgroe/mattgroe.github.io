@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+//import Media from 'react-media';
+import MediaQuery from 'react-responsive';
+
 import { css } from 'glamor';
 
 class FrontPage extends Component {
@@ -18,7 +23,14 @@ class FrontPage extends Component {
             fontSize: '22px',
             letterSpacing: '20px',
             fontWeight: 'bold',
-            textShadow: '2px 2px #aaaaaa'
+            // textShadow: '2px 2px #aaaaaa'
+        })
+
+        let from = css({
+            fontSize: '18px',
+            fontWeight: 'bold',
+            letterSpacing: '10px',
+            marginTop: '10px'
         })
 
         let pic = css({
@@ -35,10 +47,6 @@ class FrontPage extends Component {
             justifyContent: 'center',
             marginTop: '100px',
             width: '60%',
-
-            border: '3px solid white',
-            backgroundColor: 'transparent',
-            borderRadius: '20px'
         })
 
         let link = css({
@@ -50,6 +58,7 @@ class FrontPage extends Component {
             fontWeight: 'bold',
             textAlign: 'center',
             color: 'white',
+            textDecoration: 'none',
 
             marginLeft: '100px',
             marginRight: '100px',
@@ -57,18 +66,45 @@ class FrontPage extends Component {
             width: '200px',
             ':hover': {
                 opacity: '0.5'
-            }
+            },
+
+            border: '3px solid white',
+            backgroundColor: 'transparent',
+            borderRadius: '20px'
         })
 
         return(
-            <div {...style}>
-                <div {...pic}></div>
-                <div {...name}>Matthew Groe</div>
-                <div {...links}>
-                    <div {...link}>   Web Developer   </div>
-                    <div {...link}>   Software Developer    </div>
-                    <div {...link}>   Contant Me      </div>
-                </div>
+            <div>
+                <MediaQuery query="(min-device-width: 1224px)">
+                    <div {...style}>
+                        <div {...pic}></div>
+                        <div {...name}>Matthew Groe</div>
+                        <div {...from}>San Diego, CA</div>
+                        <div {...links}>
+                            <Link key='web' to='/web' {...link}><div>   Web Developer   </div></Link>
+                            <Link key='soft' to='/software' {...link}><div>   Software Developer    </div></Link>
+                            <Link key='contact' to='/contactme' {...link}><div>   Contant Me      </div></Link>
+                        </div>
+                    </div>
+                {/* <MediaQuery query="(min-device-width: 1824px)">
+                    <div {...style}>You also have a huge screen</div>
+                </MediaQuery> */}
+                {/* <MediaQuery query="(max-width: 1224px)">
+                    <div {...style}>You are sized like a tablet or mobile phone though</div>
+                </MediaQuery> */}
+                </MediaQuery>
+                <MediaQuery query="(max-device-width: 1224px)">
+                    <div {...style}>You are a tablet or mobile phone</div>
+                </MediaQuery>
+                <MediaQuery query="(orientation: portrait)">
+                    <div {...style}>You are portrait</div>
+                </MediaQuery>
+                <MediaQuery query="(orientation: landscape)">
+                    <div {...style}>You are landscape</div>
+                </MediaQuery>
+                {/* <MediaQuery query="(min-resolution: 2dppx)">
+                    <div {...style}>You are retina</div>
+                </MediaQuery> */}
             </div>
         )
     }
