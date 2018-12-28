@@ -70,8 +70,8 @@ class WebDevelopment extends Component {
                         Project Links:
                         <span {...skills}>
                             <a href='https://sun-client.herokuapp.com/' target="#" {...project}> -> React website deployed in Heroku
-                            (WIP)</a>
-                            <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a>
+                            (WIP)</a> <br></br>
+                            <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a> <br></br>
                             <a href='https://github.com/mattgroe/mld-server' target="#" {...project}> -> Must Love Dogs Node/Express/MongoDB server (WIP)</a>
                         </span>
                     </div>
