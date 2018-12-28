@@ -16,9 +16,8 @@ class App extends Component {
   render() {
 
     let flex = css({
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center'
+      height: '100vh',
+      width: '100vw'
     })
 
     return (

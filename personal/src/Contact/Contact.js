@@ -9,6 +9,18 @@ class Contact extends Component {
 
     render () {
 
+        let size = css({
+            height: '100%',
+            width: '100%'
+        })
+
+        let styleMobile = css({
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
+        })
+
         let back = css({
             position: "absolute",
             top: '50%',
@@ -40,8 +52,45 @@ class Contact extends Component {
             marginBottom: '20px'
         })
 
+        let titleDivMobilePor = css({
+            marginTop: '75%',
+            width: '80%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: '16px',
+            marginBottom: '10px',
+        })
+
+        let imgHovMobile = css({
+            marginLeft: '10px',
+            height: '35px',
+            width: '35px',
+            ':hover': {
+                textDecoration: 'none',
+                opacity: '0.5'
+            }
+        })
+
+        let titleDivMobileLan = css({
+            marginTop: '20%',
+            width: '80%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white',
+            fontWeight: 'bold',
+            fontSize: '16px',
+            marginBottom: '10px',
+        })
+
+
         return(
-            <div>
+            <div {...size}>
                 <MediaQuery query="(min-device-width: 1224px)">
                     <div {...back}> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHov}/> </Link> </div>
                     <div {...titleDiv}>
@@ -51,15 +100,31 @@ class Contact extends Component {
                         </span>
                     </div>
                 </MediaQuery>
-                {/* <MediaQuery query="(max-device-width: 1224px)">
-                    <div {...style}>Contact Me - Tablet/Phone</div>
+                <MediaQuery query="(max-device-width: 1224px)">
+                    <div {...styleMobile}></div>
                 </MediaQuery>
                 <MediaQuery query="(orientation: portrait)">
-                    <div {...style}>Contact Me - Portrait</div>
+                    <nav className="navbar navbar-dark bg-dark p-2">
+                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                    </nav>
+                    <div {...styleMobile}>
+                        <div {...titleDivMobilePor}>
+                            Contact for information
+                            <span {...skills}>Email: mgroe@ieee.org</span>
+                        </div>
+                    </div>
                 </MediaQuery>
                 <MediaQuery query="(orientation: landscape)">
-                    <div {...style}>Contact Me - landscape</div>
-                </MediaQuery> */}
+                    <nav className="navbar navbar-dark bg-dark p-2">
+                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                    </nav>
+                    <div {...styleMobile}>
+                        <div {...titleDivMobileLan}>
+                            Contact for information
+                            <span {...skills}>Email: mgroe@ieee.org</span>
+                        </div>
+                    </div>
+                </MediaQuery>
             </div>
         )
     }
