@@ -6,6 +6,8 @@ import MediaQuery from 'react-responsive';
 
 import { css } from 'glamor';
 
+import ME from '../pictures/HeyItsMe.JPG';
+
 class FrontPage extends Component {
 
 
@@ -20,25 +22,25 @@ class FrontPage extends Component {
         })
 
         let name = css({
-            fontSize: '22px',
+            fontSize: '32px',
             letterSpacing: '20px',
             fontWeight: 'bold',
             // textShadow: '2px 2px #aaaaaa'
         })
 
         let from = css({
-            fontSize: '18px',
+            fontSize: '22px',
             fontWeight: 'bold',
             letterSpacing: '10px',
             marginTop: '10px'
         })
 
         let pic = css({
-            height: '300px',
-            width: '300px',
-            borderRadius: '400',
+            height: '400px',
+            width: '325px',
+            borderRadius: '100',
             backgroundColor: 'white',
-            marginBottom: '100px'
+            marginBottom: '50px'
         })
 
         let links = css({
@@ -46,7 +48,7 @@ class FrontPage extends Component {
             flexDirection: 'row',
             justifyContent: 'center',
             marginTop: '100px',
-            width: '60%',
+            width: '80%',
         })
 
         let link = css({
@@ -56,14 +58,15 @@ class FrontPage extends Component {
             
 
             fontWeight: 'bold',
+            fontSize: '22px',
             textAlign: 'center',
             color: 'white',
             textDecoration: 'none',
 
             marginLeft: '100px',
             marginRight: '100px',
-            height: '45px',
-            width: '200px',
+            height: '60px',
+            width: '450px',
             ':hover': {
                 opacity: '0.5'
             },
@@ -77,7 +80,7 @@ class FrontPage extends Component {
             <div>
                 <MediaQuery query="(min-device-width: 1224px)">
                     <div {...style}>
-                        <div {...pic}></div>
+                        <div> <img src={ME} alt='Portfolio' {...pic}></img></div>
                         <div {...name}>Matthew Groe</div>
                         <div {...from}>San Diego, CA</div>
                         <div {...links}>
@@ -93,7 +96,7 @@ class FrontPage extends Component {
                     <div {...style}>You are sized like a tablet or mobile phone though</div>
                 </MediaQuery> */}
                 </MediaQuery>
-                <MediaQuery query="(max-device-width: 1224px)">
+                {/* <MediaQuery query="(max-device-width: 1224px)">
                     <div {...style}>You are a tablet or mobile phone</div>
                 </MediaQuery>
                 <MediaQuery query="(orientation: portrait)">
@@ -101,7 +104,7 @@ class FrontPage extends Component {
                 </MediaQuery>
                 <MediaQuery query="(orientation: landscape)">
                     <div {...style}>You are landscape</div>
-                </MediaQuery>
+                </MediaQuery> */}
                 {/* <MediaQuery query="(min-resolution: 2dppx)">
                     <div {...style}>You are retina</div>
                 </MediaQuery> */}
