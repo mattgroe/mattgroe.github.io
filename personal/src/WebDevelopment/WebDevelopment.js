@@ -51,6 +51,7 @@ class WebDevelopment extends Component {
         })
 
         let titleDiv = css({
+            height: '100%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -88,6 +89,7 @@ class WebDevelopment extends Component {
         })
 
         let skills = css({
+            textAlign: 'center',
             fontWeight: 'normal',
             marginBottom: '20px'
         })
@@ -128,52 +130,52 @@ class WebDevelopment extends Component {
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
                     <div {...styleMobile}></div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: portrait)">
-                    <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobilePor}>
-                            Web Languages & Relatable Skills:
-                            <span {...skills}>
-                                HTML, CSS, SASS/SCSS, Javascript, <br></br>
-                                Node.js, JQuery, React/JSX, <br></br>
-                                Express, SQL/MySQL, MongoDB/Mongoose, <br></br>
-                                Git Bash, AWS S3 and EC2
-                            </span>
-                            Project Links:
-                            <span {...skills}>
-                                <a href='https://sun-client.herokuapp.com/' target="#" {...project}> -> React website deployed in Heroku
-                                (WIP)</a> <br></br>
-                                <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a> <br></br>
-                                <a href='https://github.com/mattgroe/mld-server' target="#" {...project}> -> Must Love Dogs Node/Express/MongoDB server (WIP)</a>
-                            </span>
+                    <MediaQuery query="(orientation: portrait)">
+                        <nav className="navbar navbar-dark bg-dark p-2">
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobilePor}>
+                                Web Languages & Relatable Skills:
+                                <span {...skills}>
+                                    HTML, CSS, SASS/SCSS, Javascript, <br></br>
+                                    Node.js, JQuery, React/JSX, <br></br>
+                                    Express, SQL/MySQL, MongoDB/Mongoose, <br></br>
+                                    Git Bash, AWS S3 and EC2
+                                </span>
+                                Project Links:
+                                <span {...skills}>
+                                    <a href='https://sun-client.herokuapp.com/' target="#" {...project}> -> React website deployed in Heroku
+                                    (WIP)</a> <br></br>
+                                    <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a> <br></br>
+                                    <a href='https://github.com/mattgroe/mld-server' target="#" {...project}> -> Must Love Dogs Node/Express/MongoDB server (WIP)</a>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: landscape)">
-                    <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobileLan}>
-                            Web Languages & Relatable Skills:
-                            <span {...skills}>
-                                HTML, CSS, SASS/SCSS, Javascript, <br></br>
-                                Node.js, JQuery, React/JSX, <br></br>
-                                Express, SQL/MySQL, MongoDB/Mongoose, <br></br>
-                                Git Bash, AWS S3 and EC2
-                            </span>
-                            Project Links:
-                            <span {...skills}>
-                                <a href='https://sun-client.herokuapp.com/' target="#" {...project}> -> React website deployed in Heroku
-                                (WIP)</a> <br></br>
-                                <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a> <br></br>
-                                <a href='https://github.com/mattgroe/mld-server' target="#" {...project}> -> Must Love Dogs Node/Express/MongoDB server (WIP)</a>
-                            </span>
+                    </MediaQuery>
+                    <MediaQuery query="(orientation: landscape)">
+                        <nav className="navbar navbar-dark bg-dark p-2">
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobileLan}>
+                                Web Languages & Relatable Skills:
+                                <span {...skills}>
+                                    HTML, CSS, SASS/SCSS, Javascript, <br></br>
+                                    Node.js, JQuery, React/JSX, <br></br>
+                                    Express, SQL/MySQL, MongoDB/Mongoose, <br></br>
+                                    Git Bash, AWS S3 and EC2
+                                </span>
+                                Project Links:
+                                <span {...skills}>
+                                    <a href='https://sun-client.herokuapp.com/' target="#" {...project}> -> React website deployed in Heroku
+                                    (WIP)</a> <br></br>
+                                    <a href='https://github.com/mattgroe/mld-client' target="#" {...project}> -> Must Love Dogs (Dating app) React Client (WIP)</a> <br></br>
+                                    <a href='https://github.com/mattgroe/mld-server' target="#" {...project}> -> Must Love Dogs Node/Express/MongoDB server (WIP)</a>
+                                </span>
+                            </div>
                         </div>
-                    </div>
+                    </MediaQuery>
                 </MediaQuery>
             </div>
         )

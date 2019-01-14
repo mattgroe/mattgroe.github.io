@@ -38,6 +38,7 @@ class Contact extends Component {
         })
 
         let titleDiv = css({
+            height: '100%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -48,6 +49,7 @@ class Contact extends Component {
             marginBottom: '20px'
         })
         let skills = css({
+            textAlign: 'center',
             fontWeight: 'normal',
             marginBottom: '20px'
         })
@@ -102,28 +104,28 @@ class Contact extends Component {
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
                     <div {...styleMobile}></div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: portrait)">
-                    <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobilePor}>
-                            Contact for information
-                            <span {...skills}>Email: mgroe@ieee.org</span>
+                    <MediaQuery query="(orientation: portrait)">
+                        <nav className="navbar navbar-dark bg-dark p-2">
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobilePor}>
+                                Contact for information
+                                <span {...skills}>Email: mgroe@ieee.org</span>
+                            </div>
                         </div>
-                    </div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: landscape)">
-                    <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobileLan}>
-                            Contact for information
-                            <span {...skills}>Email: mgroe@ieee.org</span>
+                    </MediaQuery>
+                    <MediaQuery query="(orientation: landscape)">
+                        <nav className="navbar navbar-dark bg-dark p-2">
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobileLan}>
+                                Contact for information
+                                <span {...skills}>Email: mgroe@ieee.org</span>
+                            </div>
                         </div>
-                    </div>
+                    </MediaQuery>
                 </MediaQuery>
             </div>
         )

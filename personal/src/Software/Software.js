@@ -51,6 +51,7 @@ class Software extends Component {
         })
 
         let titleDiv = css({
+            height: '100%',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -88,6 +89,7 @@ class Software extends Component {
         })
 
         let skills = css({
+            textAlign: 'center',
             fontWeight: 'normal',
             marginBottom: '20px'
         })
@@ -125,46 +127,46 @@ class Software extends Component {
                 </MediaQuery>
                 <MediaQuery query="(max-device-width: 1224px)">
                     <div {...styleMobile}></div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: portrait)">
+                    <MediaQuery query="(orientation: portrait)">
+                        <nav className="navbar navbar-dark bg-dark p-2">
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobilePor}>
+                                Software Development & Relatable Skills:
+                                <span {...skills}>
+                                    Java, C++, Python, MySQL, JavaFX, <br></br>
+                                    server and socket communication. <br></br>
+                                </span>
+                                Project Links:
+                                <span {...skills}>
+                                    <a href='https://github.com/mattgroe/MySql-Java-XML-Export/' target="#" {...project}> -> XML Exporter written in Java with a MySQL backend</a>
+                                    <br></br>
+                                    <a href='https://github.com/mattgroe/Client-Server-Java' target="#" {...project}> -> Client and Server HTML Viewer in Java</a>
+                                </span>
+                            </div>
+                        </div>
+                    </MediaQuery>
+                    <MediaQuery query="(orientation: landscape)">
                     <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobilePor}>
-                            Software Development & Relatable Skills:
-                            <span {...skills}>
-                                Java, C++, Python, MySQL, JavaFX, <br></br>
-                                server and socket communication. <br></br>
-                            </span>
-                            Project Links:
-                            <span {...skills}>
-                                <a href='https://github.com/mattgroe/MySql-Java-XML-Export/' target="#" {...project}> -> XML Exporter written in Java with a MySQL backend</a>
-                                <br></br>
-                                <a href='https://github.com/mattgroe/Client-Server-Java' target="#" {...project}> -> Client and Server HTML Viewer in Java</a>
-                            </span>
+                            <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
+                        </nav>
+                        <div {...styleMobile}>
+                            <div {...titleDivMobileLan}>
+                                Software Development & Relatable Skills:
+                                <span {...skills}>
+                                    Java, C++, Python, MySQL, JavaFX, <br></br>
+                                    server and socket communication. <br></br>
+                                </span>
+                                Project Links:
+                                <span {...skills}>
+                                    <a href='https://github.com/mattgroe/MySql-Java-XML-Export/' target="#" {...project}> -> XML Exporter written in Java with a MySQL backend</a>
+                                    <br></br>
+                                    <a href='https://github.com/mattgroe/Client-Server-Java' target="#" {...project}> -> Client and Server HTML Viewer in Java</a>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: landscape)">
-                <nav className="navbar navbar-dark bg-dark p-2">
-                        <span className="navbar-brand mb-0 h1"> <Link key="home"  to="/" > <img src={backarrow} alt='back' {...imgHovMobile}/> </Link> </span>
-                    </nav>
-                    <div {...styleMobile}>
-                        <div {...titleDivMobileLan}>
-                            Software Development & Relatable Skills:
-                            <span {...skills}>
-                                Java, C++, Python, MySQL, JavaFX, <br></br>
-                                server and socket communication. <br></br>
-                            </span>
-                            Project Links:
-                            <span {...skills}>
-                                <a href='https://github.com/mattgroe/MySql-Java-XML-Export/' target="#" {...project}> -> XML Exporter written in Java with a MySQL backend</a>
-                                <br></br>
-                                <a href='https://github.com/mattgroe/Client-Server-Java' target="#" {...project}> -> Client and Server HTML Viewer in Java</a>
-                            </span>
-                        </div>
-                    </div>
+                    </MediaQuery>
                 </MediaQuery>
             </div>
         )

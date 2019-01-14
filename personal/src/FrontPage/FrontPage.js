@@ -167,48 +167,48 @@ class FrontPage extends Component {
                 {/* Mobile Phone - Portrait/Lanscape */}
                 <MediaQuery query="(max-device-width: 1224px)">
                     <div {...styleMobile}></div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: portrait)">
-                    <div className="pos-f-t" {...navbar}>
-                        <nav className="navbar navbar-dark bg-dark">
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                            </button>
-                        </nav>
-                        <div className="collapse" id="navbarToggleExternalContent">
-                            <div className="bg-dark p-4">
-                                <Link key='web' to='/web' {...linkMobile}><div>Web Developer</div> <div>o</div></Link>
-                                <Link key='soft' to='/software' {...linkMobile}><div>Software Developer</div> <div>o</div></Link>
-                                <Link key='contact' to='/contactme' {...linkMobile}><div>Contant Me</div> <div>o</div></Link>
+                    <MediaQuery query="(orientation: portrait)">
+                        <div className="pos-f-t" {...navbar}>
+                            <nav className="navbar navbar-dark bg-dark">
+                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                                </button>
+                            </nav>
+                            <div className="collapse" id="navbarToggleExternalContent">
+                                <div className="bg-dark p-4">
+                                    <Link key='web' to='/web' {...linkMobile}><div>Web Developer</div> <div>o</div></Link>
+                                    <Link key='soft' to='/software' {...linkMobile}><div>Software Developer</div> <div>o</div></Link>
+                                    <Link key='contact' to='/contactme' {...linkMobile}><div>Contant Me</div> <div>o</div></Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div {...meDiv}>
-                        <div> <img src={ME} alt='Portfolio' {...picMobile}></img></div>
-                        <div {...name}>Matthew Groe</div>
-                        <div {...from}>San Diego, CA</div>
-                    </div>
-                </MediaQuery>
-                <MediaQuery query="(orientation: landscape)">
-                    <div className="pos-f-t" {...navbar}>
-                        <nav className="navbar navbar-dark bg-dark">
-                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                            </button>
-                        </nav>
-                        <div className="collapse" id="navbarToggleExternalContent">
-                            <div className="bg-dark p-4">
-                                <Link key='web' to='/web' {...linkMobile}><div>Web Developer</div> <div>o</div></Link>
-                                <Link key='soft' to='/software' {...linkMobile}><div>Software Developer</div> <div>o</div></Link>
-                                <Link key='contact' to='/contactme' {...linkMobile}><div>Contant Me</div> <div>o</div></Link>
+                        <div {...meDiv}>
+                            <div> <img src={ME} alt='Portfolio' {...picMobile}></img></div>
+                            <div {...name}>Matthew Groe</div>
+                            <div {...from}>San Diego, CA</div>
+                        </div>
+                    </MediaQuery>
+                    <MediaQuery query="(orientation: landscape)">
+                        <div className="pos-f-t" {...navbar}>
+                            <nav className="navbar navbar-dark bg-dark">
+                                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                                </button>
+                            </nav>
+                            <div className="collapse" id="navbarToggleExternalContent">
+                                <div className="bg-dark p-4">
+                                    <Link key='web' to='/web' {...linkMobile}><div>Web Developer</div> <div>o</div></Link>
+                                    <Link key='soft' to='/software' {...linkMobile}><div>Software Developer</div> <div>o</div></Link>
+                                    <Link key='contact' to='/contactme' {...linkMobile}><div>Contant Me</div> <div>o</div></Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div {...meDivLandscape}>
-                        <div> <img src={ME} alt='Portfolio' {...picMobileLandscape}></img></div>
-                        <div {...name}>Matthew Groe</div>
-                        <div {...from}>San Diego, CA</div>
-                    </div>
+                        <div {...meDivLandscape}>
+                            <div> <img src={ME} alt='Portfolio' {...picMobileLandscape}></img></div>
+                            <div {...name}>Matthew Groe</div>
+                            <div {...from}>San Diego, CA</div>
+                        </div>
+                    </MediaQuery>
                 </MediaQuery>
                 {/* <MediaQuery query="(min-resolution: 2dppx)">
                     <div {...style}>You are retina</div>
